@@ -1,2 +1,5 @@
 [motd]
 kastl-awx-client01 ansible_user=kastl ansible_host=81.163.193.170
+
+[motd:vars]
+motd_variable='Hello B1 Inventory in Git'
