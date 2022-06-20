@@ -1,0 +1,14 @@
+---
+- hosts: motd
+  gather_facts: true
+  become: true
+
+  tasks:
+    - name: 'Output variable'
+      ansible.builtin.debug:
+        msg: "motd_variable steht auf {{ motd_variable }}"
+
+    - name: 'Modify /etc/motd'
+      ansible.builtin.template:
+        src: 'motd.j2'
+        dest: '/etc/motd'
